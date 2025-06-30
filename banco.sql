@@ -29,3 +29,27 @@ INSERT INTO pedidos (id, id_produto, quantidade, data_pedido) VALUES
 (1, 1, 2, '2025-06-13'),
 (2, 3, 1, '2025-06-12'),
 (3, 2, 3, '2025-06-11');
+<<<<<<< HEAD
+
+-- Atualização do preço do primeiro produto
+UPDATE produtos
+SET preco = 42.00
+WHERE id = 1;
+
+-- Remoção do pedido com id 3
+DELETE FROM pedidos
+WHERE id = 3;
+
+-- Seleção de todos os produtos
+SELECT * FROM produtos;
+
+-- Seleção de pedidos com quantidade maior ou igual a 2
+SELECT * FROM pedidos
+WHERE quantidade >= 2;
+
+-- Seleção dos nomes dos produtos e suas quantidades nos pedidos, com JOIN
+SELECT produtos.nome, pedidos.quantidade
+FROM pedidos
+JOIN produtos ON pedidos.id_produto = produtos.id;
+=======
+>>>>>>> b44bb6e27d1d0dac0772cf6762c7c79f73e19438
